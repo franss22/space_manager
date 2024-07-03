@@ -1,0 +1,9 @@
+{
+    "rust-analyzer.testExplorer": true,
+    "rust-analyzer.diagnostics.styleLints.enable": true,
+    "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+    "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
+    "rust-analyzer.inlayHints.implicitDrops.enable": true,
+    "rust-analyzer.inlayHints.discriminantHints.enable": "always",
+    "editor.formatOnSave": true
+}
