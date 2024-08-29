@@ -52,14 +52,14 @@ fn spawn_solar_system(
             // spatial: SpatialBundle::from_transform(Transform::from_xyz(30.0, 0.0, 0.0)),
             shape: MaterialMesh2dBundle {
                 mesh: Mesh2dHandle(meshes.add(Circle::new(15.0))),
-                material: materials.add(Color::rgb(0.8, 0.8, 0.1)),
+                material: materials.add(Color::srgb(0.8, 0.8, 0.1)),
                 ..default()
             },
         })
         .id();
 
     let circle = Mesh2dHandle(meshes.add(Circle::new(3.0)));
-    let planet_color = materials.add(Color::rgb(0.0, 0.1, 1.0));
+    let planet_color = materials.add(Color::srgb(0.0, 0.1, 1.0));
     for i in 0..100 {
         let pos = random_2d_pt(10.0..250.0, 10.0..250.0);
 

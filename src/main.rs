@@ -1,13 +1,15 @@
 use bevy::prelude::*;
+use bevy_prototype_lyon::prelude::*;
 use space_manager::{
-    astro_bodies::AstroBodiesPlugin, mouse::CameraPlugin, starship::StarshipPlugin,
+    astro_bodies::AstroBodiesPlugin, mouse::CameraPlugin, orbit::OrbitPlugin,
+    starship::StarshipPlugin,
 };
-
 fn main() {
     App::new()
-        .add_plugins(DefaultPlugins)
+        .insert_resource(Msaa::Sample4)
+        .add_plugins((DefaultPlugins, ShapePlugin))
         .add_plugins(CameraPlugin)
-        .add_plugins((AstroBodiesPlugin, StarshipPlugin))
+        .add_plugins((AstroBodiesPlugin, StarshipPlugin, OrbitPlugin))
         .run();
 }
 

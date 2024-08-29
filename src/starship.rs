@@ -31,7 +31,7 @@ fn spawn_starship(
             // spatial: SpatialBundle::from_transform(Transform::from_xyz(30.0, 0.0, 0.0)),
             shape: MaterialMesh2dBundle {
                 mesh: Mesh2dHandle(meshes.add(triangle)),
-                material: materials.add(Color::rgb(0.8, 0.8, 0.1)),
+                material: materials.add(Color::srgb(0.8, 0.8, 0.1)),
                 transform: Transform::default(),
                 ..default()
             },
